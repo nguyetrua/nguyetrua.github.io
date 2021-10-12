@@ -107,8 +107,23 @@ var map = new ol.Map({
     })
 });
 
+var layerSwitcher = new ol.control.LayerSwitcher({tipLabel: "Layers"});
+map.addControl(layerSwitcher);
 
-map.getView().fit([10764660.066051, 570597.196885, 13506918.444367, 2095362.426265], map.getSize());
+    var searchLayer = new SearchLayer({
+      layer: lyr_Trmbinp_14,
+      colName: 'Voltage',
+      zoom: 10,
+      collapsed: true,
+      map: map
+    });
+
+    map.addControl(searchLayer);
+    document.getElementsByClassName('search-layer')[0]
+    .getElementsByTagName('button')[0].className +=
+    ' fa fa-binoculars';
+    
+map.getView().fit([9649590.943932, 114520.398236, 15134107.700562, 3164050.856997], map.getSize());
 
 var NO_POPUP = 0
 var ALL_FIELDS = 1
