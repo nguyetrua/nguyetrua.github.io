@@ -101,16 +101,14 @@ var map = new ol.Map({
     layers: layersList,
     view: new ol.View({
          maxZoom: 28, minZoom: 1, projection: new ol.proj.Projection({
-            code: 'EPSG:4326',
+            code: 'EPSG:3857',
             extent: [-20037508.342789, -20037508.342789, 20037508.342789, 20037508.342789],
-            units: 'degrees'})
+            units: 'm'})
     })
 });
 
-var layerSwitcher = new ol.control.LayerSwitcher({tipLabel: "Layers"});
-map.addControl(layerSwitcher);
 
-map.getView().fit([92.587010, 8.427952, 119.654402, 23.478109], map.getSize());
+map.getView().fit([10764660.066051, 570597.196885, 13506918.444367, 2095362.426265], map.getSize());
 
 var NO_POPUP = 0
 var ALL_FIELDS = 1
