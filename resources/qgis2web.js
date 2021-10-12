@@ -100,10 +100,7 @@ var map = new ol.Map({
     overlays: [overlayPopup],
     layers: layersList,
     view: new ol.View({
-         maxZoom: 28, minZoom: 1, projection: new ol.proj.Projection({
-            code: 'EPSG:3857',
-            extent: [-20037508.342789, -20037508.342789, 20037508.342789, 20037508.342789],
-            units: 'm'})
+         maxZoom: 28, minZoom: 1
     })
 });
 
@@ -111,8 +108,8 @@ var layerSwitcher = new ol.control.LayerSwitcher({tipLabel: "Layers"});
 map.addControl(layerSwitcher);
 
     var searchLayer = new SearchLayer({
-      layer: lyr_Trmbinp_14,
-      colName: 'Voltage',
+      layer: lyr_NgtrngcamtsnghcNgunVinNghincuHisn_10,
+      colName: 'Viện Nghiên cứu Hải sản)',
       zoom: 10,
       collapsed: true,
       map: map
@@ -123,7 +120,7 @@ map.addControl(layerSwitcher);
     .getElementsByTagName('button')[0].className +=
     ' fa fa-binoculars';
     
-map.getView().fit([9649590.943932, 114520.398236, 15134107.700562, 3164050.856997], map.getSize());
+map.getView().fit([11048741.800803, 816028.355479, 13791000.179118, 2340793.584860], map.getSize());
 
 var NO_POPUP = 0
 var ALL_FIELDS = 1
